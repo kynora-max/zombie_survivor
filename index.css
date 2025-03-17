@@ -1,0 +1,55 @@
+body {
+	text-align: center;
+	background: black url("https://i.gifer.com/5oUS.gif") no-repeat center center fixed;
+	display: flex;
+	flex-direction: column; /* Ordnet die Kinder (Buttons) vertikal an */
+	align-items: center; /* Zentriert die Buttons horizontal */
+	justify-content: center; /* Zentriert den Inhalt vertikal */
+	min-height: 100vh; /* Stellt sicher, dass der Inhalt den gesamten Bildschirm ausfüllt */
+}
+
+h1 {
+	font-size: 40px;
+	animation: sickText 10s infinite alternate;
+}
+
+@keyframes sickText {
+	0% { text-shadow: 0 0 10px red; color: red; }
+	25% { text-shadow: 0 0 10px orange; color: orange; }
+	50% { text-shadow: 0 0 10px lime; color: lime; }
+	75% { text-shadow: 0 0 10px cyan; color: cyan; }
+	100% { text-shadow: 0 0 10px magenta; color: magenta; }
+}
+
+@keyframes neonglow {
+	0% { box-shadow: 0 0 10px hotpink; }
+	50% { box-shadow: 0 0 60px hotpink; }
+	100% { box-shadow: 0 0 10px hotpink; }
+}
+
+@keyframes sickBack {
+	0% { background-color: red; }
+	25% { background-color: orange; }
+	50% { background-color: lime }
+	75% { background-color: cyan }
+	100% { background-color: magenta;}
+}
+
+button {
+	margin-top: 20px; /* Abstand zwischen den Buttons */
+	color: rgb(0, 0, 0);
+	background-color: rgb(255, 157, 229);
+	border: none;
+	padding: 10px 20px;
+	animation: neonglow 2s infinite alternate;
+	border-radius: 20px;
+}
+
+button:hover {
+	animation: sickBack 5s infinite alternate;
+}
+
+
+.text {
+	color: white;
+}
